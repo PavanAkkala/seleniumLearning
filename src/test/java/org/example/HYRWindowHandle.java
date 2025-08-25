@@ -17,7 +17,6 @@ public class HYRWindowHandle {
 
         WebDriver driver = new ChromeDriver();
 
-        // Navigate to the website
         driver.get("https://www.hyrtutorials.com/p/window-handles-practice.html");
         driver.manage().window().maximize();
 
@@ -35,10 +34,10 @@ public class HYRWindowHandle {
 
         driver.findElement(By.xpath("//button[@id='alertBox']")).click();
 
-      //  Alert alert = driver.switchTo().alert();
+        //  Alert alert = driver.switchTo().alert();
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        Alert alert =    wait.until(ExpectedConditions.alertIsPresent());// This will explicitly calls driver.switchTo().alert(); when an alert is present
+        Alert alert = wait.until(ExpectedConditions.alertIsPresent());// This will explicitly calls driver.switchTo().alert(); when an alert is present
 
         String text = alert.getText();
 
@@ -47,7 +46,7 @@ public class HYRWindowHandle {
 
         driver.switchTo().window(parentWindowHandle);
 
-       String lobo =  driver.findElement(By.xpath("//button[@id='newTabBtn']")).getText();
+        String lobo = driver.findElement(By.xpath("//button[@id='newTabBtn']")).getText();
 
         System.out.println(lobo);
     }
