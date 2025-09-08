@@ -30,12 +30,17 @@ public class Checkboes {
             if(we.getText().contains("India")) {
 
                 we.click();
+
+                System.out.println(we.getText());
             }
 
         }
 
+
+
         //select.selectByVisibleText("India");
-        System.out.println("Selected value: India");
+        //System.out.println("Selected value: India");
+
 
     }
 }

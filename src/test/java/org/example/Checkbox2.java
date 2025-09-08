@@ -16,14 +16,20 @@ public class Checkbox2 {
 
         List<WebElement> elements = driver.findElements(By.xpath("//input[@type='checkbox' and contains(@id,'day')]"));
 
-        for (WebElement ele:elements) {
+//        for (WebElement ele:elements) {
+//
+//            String txt = ele.getAttribute("value");
+//
+//            if(txt.equals("thursday")) {
+//
+//                ele.click();
+//            }
+//        }
 
-            String txt = ele.getAttribute("value");
+        for(int i=0;i<elements.size();i++) {
 
-            if(txt.equals("thursday")) {
-
-                ele.click();
-            }
+            elements.get(i).click();
         }
+
     }
 }
