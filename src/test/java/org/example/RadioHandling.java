@@ -23,7 +23,7 @@ public class RadioHandling {
 
             String text = lo.get(i).getAttribute("value");
 
-            if(text.equals("female")) {
+            if(text.equals("male")) {
 
 
                 lo.get(i).click();
